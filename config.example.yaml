@@ -1,0 +1,18 @@
+# Copy this file to config.yaml and edit it. config.yaml is gitignored.
+
+settings:
+  base_url: "https://www.vinted.de"  # change for another country, e.g. vinted.fr
+  poll_interval: 60                  # seconds between polls. don't go too low or Vinted rate-limits you
+
+filters:
+  # Each entry is one independent watch. Add as many as you like.
+
+  - search_text: "carhartt jacke"
+    max_price: 60
+    sizes: ["M", "L"]
+    brands: ["Carhartt", "Carhartt WIP"]
+    keywords: ["jacke"]            # title must contain this
+
+  - search_text: "arcteryx"
+    max_price: 150
+    min_price: 20                  # skip obvious scam listings priced at 1€
